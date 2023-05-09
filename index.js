@@ -1,8 +1,3 @@
-
-
-
-
-
 const chk = document.getElementById("chk");
 
 chk.addEventListener("change", () => {
@@ -56,30 +51,6 @@ const keys = [
 
 var letters = keys.length;
 
-var rawdowWords = [
-  "abelha",
-  "musculo",
-  "piscina",
-  "turma da monica",
-  "the wichter",
-  "friends",
-  "Apenas Um Show",
-  "turma da monica",
-  "Jão Pessoa",
-  "João e Maria Caçador de Bruxas",
-  "github",
-  "murder in my mind",
-  "land of the fire",
-  "Pirates",
-  "Lazaro Talarico",
-  "Ocean",
-  "Terra",
-  "Montanha",
-];
-var PalavraAleatoria =
-  rawdowWords[Math.floor(Math.random() * rawdowWords.length)];
-console.log(PalavraAleatoria);
-
 for (var contador = 0; contador < 14; contador++) {
   var divb = document.createElement("div");
   document.getElementById("keboard").appendChild(divb);
@@ -108,7 +79,94 @@ for (var contador = 14; contador < 26; contador++) {
   button.style.width = "40px";
 }
 
-document.getElementById("palavra").innerHTML = PalavraAleatoria;
+
+
+
+
+
+
+
+  var words = [
+    "abelha",
+    "musculo",
+    "piscina",
+    "turma da monica",
+    "the wichter",
+    "friends",
+    "Apenas Um Show",
+    "turma da monica",
+    "Jão Pessoa",
+    "João e Maria Caçador de Bruxas",
+    "github",
+    "murder in my mind",
+    "land of the fire",
+    "Pirates",
+    "Lazaro Talarico",
+    "Ocean",
+    "Terra",
+    "Montanha",
+  ];
+
+
+  var contwords = words.length
+var drawnword
+var wordtype
+var wordcount
+var word = []
+
+
+  function prize(){
+    
+    var diff = contwords
+    var rand = Math.random()
+    rand = Math.floor(rand * diff)
+    return rand
+
+}
+
+drawnword = words[prize()]
+
+console.log(drawnword)
+
+var wordspace = drawnword.split(' ')
+
+wordcount = wordspace.length
+
+console.log(wordcount)
+
+if (wordcount > 1){
+    wordtype = true
+}
+else {
+    wordtype = false
+}
+
+
+if (wordtype == true){
+    for(var i = 0; i < wordcount; i++){
+        word[i] = wordspace[i].split('')
+        console.log(wordspace[i])
+        console.log(word[i])
+    }
+} else {
+    word[0] = wordspace[0].split('')
+}
+
+for(var i=0; i < word.length; i++){
+    for (var j=0; j < word[i].length; j++){
+        var input = document.createElement('input')
+        input.setAttribute('type','text')
+        input.setAttribute('class', 'form-control')
+        document.getElementById('word').appendChild(input)
+   }
+}
+
+
+
+
+
+
+
 
 
 

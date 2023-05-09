@@ -1,3 +1,5 @@
+
+
 .mode-dark {
   margin-top: 20px;
   margin-left: 20px;
@@ -149,4 +151,11 @@ h1.darkk {
   display: flex;
   justify-content: end;
   margin-right: 30px;
+}
+
+#word{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
