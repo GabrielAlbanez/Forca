@@ -158,4 +158,10 @@ h1.darkk {
   gap: 30px;
   justify-content: center;
   align-items: center;
+  padding-left: 100px;
+  
+}
+.espaco{
+  width: 20px;
+  
 }
