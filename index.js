@@ -161,14 +161,17 @@ for (var i = 0; i < word.length; i++) {
 function getValueBotao(id) {
   // letter = document.getElementById("").innerHTML
   var valueButton = id;
-
+  document.getElementById(id).disabled = true
   verificar(valueButton);
-
   verificarErros();
+  verficarClick()
+
 }
 
 var quatidadeErros = 0;
 var quantidadeTentativas = 6
+var quantidadeCliks = 0;    
+
 
 function verificar(valueButton) {
   var quantidadeAcertos = 0;
@@ -176,12 +179,12 @@ function verificar(valueButton) {
     if (valueButton == document.getElementById(i).value) {
       document.getElementById(i).style.color = "black";
        quantidadeAcertos = quantidadeAcertos + 1
-       alert("vc acertoo")
+       quantidadeCliks = quantidadeCliks + 1
     } 
     }
     if(quantidadeAcertos == 0) {
-      alert("vc erro")
       quatidadeErros += 1 
+      quantidadeCliks = quantidadeCliks + 1
     }
     
     // if(quantidadeErros >  1){
@@ -191,13 +194,25 @@ function verificar(valueButton) {
   }
 
   function verificarErros(){
-    for(var i=0 ;i  <= quatidadeErros;i++){
+    for(var i=1 ;i  <= quatidadeErros;i++){
       document.getElementById("p"+ i).style.visibility = "visible"
     } 
-    if(quatidadeErros = 6){
+    console.log(quatidadeErros)
+    if(quatidadeErros == 6){
      alert("Game Over")
+     location.reload();
     }
   
   }
-    
+
+  
+ function verficarClick(){
+  if(quantidadeCliks > 1){
+    quantidadeCliks = 0
+    // for(var i=0; i <= 25;i++){
+    //   document.getElementById(i)
+    // }
+  
+  }
+ }
 

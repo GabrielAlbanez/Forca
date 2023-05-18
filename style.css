@@ -71,37 +71,37 @@ h1.darkk {
   margin-top: 40px;
 }
 
-#head1 {
+#p1 {
   margin-left: 23px;
   margin-top: -490px;
-  visibility: visible;
+  visibility: hidden;
 }
 
-#stem2 {
+#p2 {
   margin-left: 13px;
   margin-top: -10px;
   visibility: hidden;
 }
 
-#arm-d {
+#p3 {
   margin-left: 82px;
   margin-top: -112px;
   visibility: hidden;
 }
 
-#arm-e {
+#p4 {
   margin-left: -20px;
   margin-top: -153px;
   visibility: hidden;
 }
 
-#leg-d {
+#p5 {
   margin-left: 23px;
   margin-top: -54px;
   visibility: hidden;
 }
 
-#leg-e {
+#p6 {
   margin-left: 3px;
   margin-top: -234px;
   visibility: hidden;
